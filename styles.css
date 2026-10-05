@@ -391,3 +391,6 @@ body.dark-mode .skill-adder,body.dark-mode .contact-form-wrap,body.dark-mode .pr
 body.dark-mode input,body.dark-mode textarea{background:#172534;color:#fff;border-color:#496176}
 body.dark-mode .dynamic-skill{background:#214866;color:#fff}
 @media(max-width:700px){.theme-toggle{margin:.5rem 0}.welcome-message{left:12px;right:12px;top:70px}}
+
+/* Fix: keep section heading visible while toggling section content. */
+.section-toggle { display: inline-block; margin-top: 0; margin-bottom: 1.25rem; }

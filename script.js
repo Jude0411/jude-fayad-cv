@@ -22,7 +22,9 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!section) return;
       const hide = button.getAttribute("aria-expanded") === "true";
       Array.from(section.children).forEach(function (child) {
-        if (child !== button) child.hidden = hide;
+        if (child !== button && !child.classList.contains("section-heading")) {
+          child.style.display = hide ? "none" : "";
+        }
       });
       button.setAttribute("aria-expanded", String(!hide));
       const name = button.dataset.target.charAt(0).toUpperCase() + button.dataset.target.slice(1);
