@@ -365,3 +365,29 @@ footer {
     border: 6px solid rgba(255,255,255,0.18);
     box-shadow: 0 16px 45px rgba(0,0,0,0.18);
 }
+
+/* Assignment 2 interactive components */
+.theme-toggle,.section-toggle,.project-details-btn,#addSkillBtn,.submit-btn{
+  border:0;border-radius:10px;padding:.7rem 1rem;font:inherit;font-weight:700;cursor:pointer;
+}
+.theme-toggle{margin-left:.75rem;background:#fff;color:#173a5e}
+.section-toggle,.project-details-btn,#addSkillBtn,.submit-btn{background:#1f6fb2;color:#fff;margin:.5rem 0 1rem}
+.welcome-message{position:fixed;top:80px;right:20px;z-index:999;padding:.9rem 1.1rem;border-radius:12px;background:#fff;color:#173a5e;box-shadow:0 10px 30px rgba(0,0,0,.18);transition:.35s}
+.welcome-message.hide{opacity:0;transform:translateY(-10px);pointer-events:none}
+.skill-adder,.contact-form-wrap,.project-extra{margin-top:1.25rem;padding:1.25rem;border-radius:14px;background:rgba(31,111,178,.08)}
+.skill-input-row{display:flex;gap:.75rem;flex-wrap:wrap}
+.skill-input-row input{flex:1 1 220px}
+.form-group{margin-bottom:1rem}
+.form-group label{display:block;font-weight:700;margin-bottom:.35rem}
+.form-group input,.form-group textarea,.skill-input-row input{width:100%;box-sizing:border-box;border:1px solid #c8d3df;border-radius:9px;padding:.75rem;font:inherit}
+.error-message{display:block;color:#b42318;min-height:1.2em;margin-top:.25rem}
+.form-message{font-weight:700;min-height:1.3em}
+.input-error{border-color:#b42318!important}
+.dynamic-skill{display:inline-block;margin:.3rem;padding:.45rem .75rem;border-radius:999px;background:#e7f2fb;color:#173a5e;font-weight:700}
+body.dark-mode{background:#0f1720;color:#e8eef5}
+body.dark-mode header,body.dark-mode nav{background-color:#0d2f50}
+body.dark-mode section,body.dark-mode .card,body.dark-mode .project-card{color:#e8eef5}
+body.dark-mode .skill-adder,body.dark-mode .contact-form-wrap,body.dark-mode .project-extra{background:rgba(255,255,255,.08)}
+body.dark-mode input,body.dark-mode textarea{background:#172534;color:#fff;border-color:#496176}
+body.dark-mode .dynamic-skill{background:#214866;color:#fff}
+@media(max-width:700px){.theme-toggle{margin:.5rem 0}.welcome-message{left:12px;right:12px;top:70px}}

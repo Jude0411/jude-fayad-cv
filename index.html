@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div id="welcomeMessage" class="welcome-message" role="status">Welcome to my portfolio page!</div>
     <header class="hero" id="home">
         <nav class="navbar" aria-label="Main navigation">
             <a class="logo" href="#home">JF</a>
@@ -19,7 +20,8 @@
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        </nav>
+        <button id="themeToggle" class="theme-toggle" type="button">Dark Mode</button>
+</nav>
 
         <div class="hero-content">
             <img src="images/profile.png" alt="Profile photo of Jude Fayad" class="profile-image">
@@ -83,6 +85,7 @@
         </section>
 
         <section id="skills" class="section">
+<button id="skillsToggle" class="section-toggle" type="button" data-target="skills" aria-expanded="true">Hide Skills</button>
             <div class="section-heading">
                 <p class="section-number">03</p>
                 <h2>Skills</h2>
@@ -95,9 +98,20 @@
                 <div class="skill-card"><h3>Supabase</h3><p>Backend/database integration for academic web application projects.</p></div>
                 <div class="skill-card"><h3>Business Analysis</h3><p>Business process mapping, bottleneck identification and process improvement.</p></div>
             </div>
-        </section>
+        
+<div class="skill-adder">
+  <label for="skillInput"><strong>Add a new skill</strong></label>
+  <div class="skill-input-row">
+    <input id="skillInput" type="text" placeholder="e.g., JavaScript" maxlength="40">
+    <button id="addSkillBtn" type="button">Add Skill</button>
+  </div>
+  <div id="dynamicSkills" class="dynamic-skills" aria-live="polite"></div>
+  <p id="skillMessage" class="form-message"></p>
+</div>
+</section>
 
         <section id="projects" class="section">
+<button id="projectsToggle" class="section-toggle" type="button" data-target="projects" aria-expanded="true">Hide Projects</button>
             <div class="section-heading">
                 <p class="section-number">04</p>
                 <h2>Selected Projects</h2>
@@ -157,7 +171,14 @@
                     </div>
                 </article>
             </div>
-        </section>
+        
+<div class="project-interaction">
+  <button id="projectDetailsBtn" class="project-details-btn" type="button" aria-expanded="false">Show Project Details</button>
+  <div id="projectExtraDetails" class="project-extra" hidden>
+    <p><strong>Portfolio Project Focus:</strong> These projects apply business information systems concepts to real workflows, including requirements analysis, process improvement, databases, dashboards, and digital solutions.</p>
+  </div>
+</div>
+</section>
 
         <section id="experience" class="section">
             <div class="section-heading">
@@ -200,11 +221,35 @@
                     <a href="https://www.linkedin.com/in/jude-fayad-5295b8306/" target="_blank" rel="noopener noreferrer" aria-label="Jude Fayad LinkedIn profile">LinkedIn Profile</a>
                 </div>
             </div>
-        </section>
+        
+<div class="contact-form-wrap">
+  <h3>Send Me a Message</h3>
+  <form id="contactForm" novalidate>
+    <div class="form-group">
+      <label for="contactName">Name</label>
+      <input id="contactName" name="name" type="text">
+      <small id="nameError" class="error-message"></small>
+    </div>
+    <div class="form-group">
+      <label for="contactEmail">Email</label>
+      <input id="contactEmail" name="email" type="email">
+      <small id="emailError" class="error-message"></small>
+    </div>
+    <div class="form-group">
+      <label for="contactMessage">Message</label>
+      <textarea id="contactMessage" name="message" rows="5"></textarea>
+      <small id="messageError" class="error-message"></small>
+    </div>
+    <button class="submit-btn" type="submit">Send Message</button>
+    <p id="formStatus" class="form-message" aria-live="polite"></p>
+  </form>
+</div>
+</section>
     </main>
 
     <footer>
         <p>&copy; 2026 Jude Fayad. Personal CV Website.</p>
     </footer>
+<script src="script.js"></script>
 </body>
 </html>
