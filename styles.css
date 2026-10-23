@@ -394,3 +394,25 @@ body.dark-mode .dynamic-skill{background:#214866;color:#fff}
 
 /* Fix: keep section heading visible while toggling section content. */
 .section-toggle { display: inline-block; margin-top: 0; margin-bottom: 1.25rem; }
+
+/* Assignment 3: live API portfolio section */
+.api-intro { max-width: 760px; margin-bottom: 1.1rem; color: #4b5d70; }
+.api-toolbar { display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap; margin-bottom:1rem; }
+.github-profile-link { color:#1765a8; font-weight:700; text-decoration:underline; text-underline-offset:3px; }
+.api-refresh { background:#1f6fb2; color:white; border:0; border-radius:10px; padding:.75rem 1.15rem; cursor:pointer; font:inherit; font-weight:700; }
+.api-refresh:disabled { opacity:.55; cursor:wait; }
+.api-status { padding:.75rem 1rem; border-radius:10px; background:#e7eef8; margin-bottom:1rem; }
+.api-error { background:#fff0ee; color:#a12719; }
+.api-success { background:#e6f3ed; color:#155b43; }
+.repo-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.2rem; }
+.repo-card { background:#fff; border:1px solid #e1eaf2; border-radius:16px; padding:1.5rem; box-shadow:0 8px 24px rgba(15,40,75,.06); min-width:0; }
+.repo-card h3 { font-size:1.1rem; line-height:1.4; margin-bottom:.7rem; overflow-wrap:anywhere; color:#143f69; }
+.repo-card h3 a:hover { text-decoration:underline; }
+.repo-description { color:#4b5d70; margin-bottom:1.3rem; }
+.repo-meta { display:flex; flex-wrap:wrap; gap:.5rem 1rem; font-size:.85rem; font-weight:700; color:#285a84; }
+body.dark-mode .repo-card { background:#172534; color:#e8eef5; border-color:#36526c; }
+body.dark-mode .repo-card h3, body.dark-mode .repo-description, body.dark-mode .repo-meta, body.dark-mode .api-intro { color:#e8eef5; }
+body.dark-mode .api-status { background:#243d53; color:#e8eef5; }
+body.dark-mode .github-profile-link { color:#9ed0ff; }
+@media(max-width:850px) { .repo-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:560px) { .repo-grid { grid-template-columns:1fr; } }
